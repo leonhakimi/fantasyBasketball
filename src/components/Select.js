@@ -24,11 +24,6 @@ const loadOptions = _.debounce((inputValue, callback) => {
 }, 500);
 
 class Select extends Component {
-  // state = { inputValue: "" };
-  // handleInputChange = (newValue) => {
-  //   this.setState({ inputValue: newValue });
-  //   return;
-  // };
   render() {
     return (
       <div>
@@ -37,11 +32,9 @@ class Select extends Component {
           cacheOptions
           loadOptions={loadOptions}
           defaultOptions
-          defaultValue={{ value: 192, label: "James Harden" }}
           onChange={(e) => {
             this.props.updatePlayers(e);
           }}
-          //onInputChange={this.handleInputChange}
         />
       </div>
     );
